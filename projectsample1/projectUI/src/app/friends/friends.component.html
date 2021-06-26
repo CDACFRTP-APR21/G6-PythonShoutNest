@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-5">
+            <h4 style="text-align: center;">FriendList</h4>
+<ul *ngFor="let dataitem of friendList" class="list-group">
+    <li class="list-group-item">{{dataitem.userName}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-outline-primary btn-sm" (click)="unFriend(dataitem.userId)">Unfriend</button>
+    </li>
+</ul>
+</div>
+<div class="col-lg-7">
+    <h4 style="text-align: center;">FriendRequests</h4>
+
+    <ul *ngFor="let dataitem of friendList" class="list-group">
+        <li class="list-group-item">{{dataitem.userName}} 
+        <button type="button" class="btn btn-outline-primary btn-sm" >Accept</button>&nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-outline-primary btn-sm">Reject</button>
+
+        </li>
+    </ul>
+    </div>
+
+</div>
+
